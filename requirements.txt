@@ -1,0 +1,7 @@
+line-bot-sdk
+bs4
+flask
+datetime
+emoji
+pyshorteners
+gunicorn
