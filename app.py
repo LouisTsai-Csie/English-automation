@@ -16,7 +16,7 @@ import os
 app = Flask(__name__)
 
 line_bot_api = LineBotApi(os.environ['CHANNEL_ACCESS_TOKEN'])
-handler = WebhookHandler(os.environ['CHANEL_SECRET'])
+handler = WebhookHandler(os.environ['CHANNEL_SECRET'])
 
 
 @app.route("/callback", methods=['POST'])
@@ -40,9 +40,20 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text))
+    msg = str(event.message.text).upper().strip() # 使用者輸入的內容
+    profile = line_bot_api.get_profile(event.source.user_id)
+    user_name = profile.display_name #使用者名稱
+    uid = profile.user_id # 發訊者ID
+
+
+
+
+
+
+
+
+
+
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
