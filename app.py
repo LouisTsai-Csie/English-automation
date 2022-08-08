@@ -1,3 +1,4 @@
+# LINE BOT SDK
 from flask import Flask, request, abort
 
 from linebot import (
@@ -10,8 +11,13 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 
+# 相關套件
 
 import os
+
+# 檔案
+
+import config
 
 app = Flask(__name__)
 
@@ -46,13 +52,15 @@ def handle_message(event):
     uid = profile.user_id # 發訊者ID
 
 
+    ### 老師端功能開發
+    if uid == config.TEACHER_LINE_ID:
+        pass
 
 
-
-
-
-
-
+    ### 學生端功能開發
+    else:
+        line_bot_api.reply_message(reply_token, TextSendMessage(text='Hello World!'))
+        
 
 
 if __name__ == "__main__":

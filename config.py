@@ -1,2 +1,1 @@
-channel_access_token = 'JKYFGfCUNv/gwq8gAn/sfJGx1ZqqAu5XDwvNJ7ZsyOrlga6VTURQpJktbd6XBfdYHs0EKHgZ6XGAPBVogt+9X6+tY4nQPsmoXt3E5HKQtl0/Gr0f2iiW+/FWNMwrL7G2olx1D9pTEWI8PyHoZYts8wdB04t89/1O/w1cDnyilFU='
-channel_secret = 'd92aeb1b026e7646b6a1c4542f3cf2b5'
+TEACHER_LINE_ID = ''
