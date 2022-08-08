@@ -59,7 +59,7 @@ def handle_message(event):
 
     ### 學生端功能開發
     else:
-        line_bot_api.reply_message(reply_token, TextSendMessage(text='Hello World!'))
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='Hello World!'))
         
 
 
