@@ -5,3 +5,5 @@ datetime
 emoji
 pyshorteners
 gunicorn
+pymongo
+dnspython
