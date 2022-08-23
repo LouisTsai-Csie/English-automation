@@ -11,7 +11,7 @@ def userInfoInit(LineID, userName):
         'testing': {
             'exam': '',
             'index': 0,
-        }
+        },
         'classes': '',
         'score': {
             'first': 0,
