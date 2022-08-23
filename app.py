@@ -57,7 +57,15 @@ def handle_message(event):
     profile = line_bot_api.get_profile(event.source.user_id)
     user_name = profile.display_name #使用者名稱
     uid = profile.user_id # 發訊者ID
-    
+    line_bot_api.push_message(uid, TextSendMessage(text='test'))
+
+
+
+
+
+
+
+    '''
     ### 老師端功能開發
     if uid == config.TEACHER_LINE_ID:
         pass
@@ -127,6 +135,7 @@ def handle_message(event):
             else: line_bot_api.push_message(uid, TextSendMessage(text='請專注考試'))
 
             # line_bot_api.push_message()
+'''
 
 if __name__ == "__main__":
     port = int(os.environ.get('PORT', 5000))
